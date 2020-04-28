@@ -1,0 +1,51 @@
+<button mat-raised-button (click)="createCliente()" color="primary">
+      Novo Cliente
+</button>
+
+<mat-form-field>
+    <mat-label>Pesquisar</mat-label>
+      <input matInput (keyup)="applyFilter($event)" placeholder="Pesquise o cliente">
+    </mat-form-field>
+    
+    <table mat-table [dataSource]="clientes" class="mat-elevation-z8">
+    
+      <!-- Position Column -->
+      <ng-container matColumnDef="nome">
+        <th mat-header-cell *matHeaderCellDef> Nome </th>
+        <td mat-cell *matCellDef="let element"> {{element.nome}} </td>
+      </ng-container>
+    
+      <ng-container matColumnDef="telefone">
+        <th mat-header-cell *matHeaderCellDef> Telefone </th>
+        <td mat-cell *matCellDef="let element"> {{element.telefone}} </td>
+      </ng-container>
+    
+      <ng-container matColumnDef="endereco">
+        <th mat-header-cell *matHeaderCellDef> Endereço </th>
+        <td mat-cell *matCellDef="let element"> {{element.endereco}} </td>
+      </ng-container>
+    
+      <ng-container matColumnDef="paroquia">
+        <th mat-header-cell *matHeaderCellDef> Paróquia </th>
+        <td mat-cell *matCellDef="let element"> {{element.paroquia}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="action">
+        <th mat-header-cell *matHeaderCellDef>#</th>
+        <td mat-cell *matCellDef="let element">
+            <a routerLink="/clientes/update/{{ element.id }}" class="edit">
+                <i class="material-icons">
+                    edit
+                </i>
+            </a>
+            <a routerLink="/clientes/delete/{{ element.id }}" class="delete">
+                <i class="material-icons">
+                    delete
+                </i>
+            </a>
+        </td>
+      </ng-container>
+    
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
