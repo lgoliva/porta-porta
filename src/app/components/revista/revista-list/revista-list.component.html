@@ -1,39 +1,34 @@
-<button mat-raised-button (click)="createProduto()" color="primary">
-      Novo Produto
+<button mat-raised-button (click)="createRevista()" color="primary">
+      Nova Revista
 </button>
 
 <mat-form-field>
     <mat-label>Pesquisar</mat-label>
-      <input matInput (keyup)="applyFilter($event)" placeholder="Pesquise o produto">
+      <input matInput (keyup)="applyFilter($event)" placeholder="Pesquise a revista">
     </mat-form-field>
     
-    <table mat-table [dataSource]="produtos" class="mat-elevation-z8">
+    <table mat-table [dataSource]="revistas" class="mat-elevation-z8">
     
       <!-- Position Column -->
-      <ng-container matColumnDef="codigo">
-        <th mat-header-cell *matHeaderCellDef> Código </th>
-        <td mat-cell *matCellDef="let element"> {{element.codigo}} </td>
-      </ng-container>
-    
       <ng-container matColumnDef="nome">
         <th mat-header-cell *matHeaderCellDef> Nome </th>
         <td mat-cell *matCellDef="let element"> {{element.nome}} </td>
       </ng-container>
-
-      <ng-container matColumnDef="nome">
-        <th mat-header-cell *matHeaderCellDef> % </th>
-        <td mat-cell *matCellDef="let element"> {{element.porcentagem}} </td>
+    
+      <ng-container matColumnDef="descricao">
+        <th mat-header-cell *matHeaderCellDef> Descrição </th>
+        <td mat-cell *matCellDef="let element"> {{element.descricao}} </td>
       </ng-container>
 
       <ng-container matColumnDef="action">
         <th mat-header-cell *matHeaderCellDef>#</th>
         <td mat-cell *matCellDef="let element">
-            <a routerLink="/clientes/update/{{ element.id }}" class="edit">
+            <a routerLink="/revistas/update/{{ element.id }}" class="edit">
                 <i class="material-icons">
                     edit
                 </i>
             </a>
-            <a routerLink="/clientes/delete/{{ element.id }}" class="delete">
+            <a routerLink="/revistas/delete/{{ element.id }}" class="delete">
                 <i class="material-icons">
                     delete
                 </i>

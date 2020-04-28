@@ -33,6 +33,8 @@ import { ProdutoCreateComponent } from './components/produto/produto-create/prod
 import { ProdutoListComponent } from './components/produto/produto-list/produto-list.component';
 import { LoginFormComponent } from './components/usuario/login-form/login-form.component';
 import { RegistroFormComponent } from './components/usuario/registro-form/registro-form.component';
+import { RevistaListComponent } from './components/revista/revista-list/revista-list.component';
+import { RevistaCreateComponent } from './components/revista/revista-create/revista-create.component';
 
 
 @NgModule({
@@ -47,7 +49,9 @@ import { RegistroFormComponent } from './components/usuario/registro-form/regist
     ProdutoCreateComponent,
     ProdutoListComponent,
     LoginFormComponent,
-    RegistroFormComponent
+    RegistroFormComponent,
+    RevistaListComponent,
+    RevistaCreateComponent
   ],
   imports: [
     BrowserModule,

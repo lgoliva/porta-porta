@@ -1,3 +1,4 @@
+
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
@@ -6,7 +7,8 @@ import { ClienteListComponent } from './components/cliente/cliente-list/cliente-
 import { ClienteCreateComponent } from './components/cliente/cliente-create/cliente-create.component';
 import { ProdutoCreateComponent } from './components/produto/produto-create/produto-create.component';
 import { ProdutoListComponent } from './components/produto/produto-list/produto-list.component';
-
+import { RevistaListComponent } from './components/revista/revista-list/revista-list.component';
+import { RevistaCreateComponent } from './components/revista/revista-create/revista-create.component';
 
 const routes: Routes = [
   {
@@ -28,6 +30,14 @@ const routes: Routes = [
   {
     path: "clientes/delete",
     component: ClienteCreateComponent
+  },
+  {
+    path: "revistas",
+    component: RevistaListComponent
+  },
+  {
+    path: "revistas/create",
+    component: RevistaCreateComponent
   },
   {
     path: "produtos",

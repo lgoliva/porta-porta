@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { Cliente } from './cliente.model';
+import { Cliente } from './cliente';
 
 import { AngularFireDatabase } from '@angular/fire/database';
 import { map } from 'rxjs/operators';

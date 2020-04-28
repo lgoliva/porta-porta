@@ -1,0 +1,21 @@
+<mat-card>
+      <mat-card-title>Nova Revista</mat-card-title>
+
+      <form>
+            <mat-form-field>
+                  <input matInput placeholder="Nome" name="nome" [(ngModel)]="revista.nome">
+            </mat-form-field>
+
+            <mat-form-field>
+                  <input matInput placeholder="Descrição" name="descricao" [(ngModel)]="revista.descricao">
+            </mat-form-field>
+      </form>
+
+      <button mat-raised-button (click)="salvar()" color="primary">
+            Salvar
+      </button>
+      
+      <button mat-raised-button (click)="cancelar()">
+            Cancelar
+      </button>
+</mat-card>
