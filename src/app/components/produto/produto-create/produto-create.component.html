@@ -9,6 +9,19 @@
             <mat-form-field>
                   <input matInput placeholder="Nome" name="nome" [(ngModel)]="produto.nome">
             </mat-form-field>
+
+            <mat-form-field>
+                  <input matInput placeholder="Porcentagem %" name="porcentagem" [(ngModel)]="produto.porcentagem">
+            </mat-form-field>
+
+            <mat-form-field>
+                  <mat-label>Revista</mat-label>
+                  <mat-select [(ngModel)]="produto.revistaId" name="revistaId">
+                        <mat-option *ngFor="let revista of revistas" [value]="revista.id">
+                              {{ revista.nome }}
+                        </mat-option>
+                  </mat-select>
+            </mat-form-field>
       </form>
 
       <button mat-raised-button (click)="salvar()" color="primary">

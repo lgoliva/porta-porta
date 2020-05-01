@@ -14,7 +14,7 @@ export class ProdutoListComponent implements OnInit {
 
   produtos = new MatTableDataSource();
   
-  displayedColumns: string[] = ['codigo', 'nome', 'porcetagem', 'action'];
+  displayedColumns: string[] = ['codigo', 'nome', 'porcentagem', 'action'];
   
   ngOnInit(): void {
     this.produtoService.listar().subscribe(actions => {
