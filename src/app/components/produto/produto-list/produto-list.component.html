@@ -25,6 +25,11 @@
         <td mat-cell *matCellDef="let element"> {{element.porcentagem}} </td>
       </ng-container>
 
+      <ng-container matColumnDef="revista">
+        <th mat-header-cell *matHeaderCellDef> Revista </th>
+        <td mat-cell *matCellDef="let element"> {{element.revista}} </td>
+      </ng-container>
+
       <ng-container matColumnDef="action">
         <th mat-header-cell *matHeaderCellDef>#</th>
         <td mat-cell *matCellDef="let element">

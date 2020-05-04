@@ -29,7 +29,6 @@ export class ProdutoCreateComponent implements OnInit {
     this.produtoService.salvar(this.produto);
     // this.produtoService.showMenssage("Produt cadastrado com sucesso");
     this.cancelar();
-
   }
 
   cancelar(): void {

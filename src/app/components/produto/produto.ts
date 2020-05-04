@@ -4,4 +4,5 @@ export class Produto {
       nome: string
       porcentagem: number
       revistaId: string
+      revista?: string
 }
