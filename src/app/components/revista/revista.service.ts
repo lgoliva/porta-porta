@@ -14,9 +14,7 @@ export class RevistaService {
 
   salvar(revista: Revista) {
     this.db.list("revistas").push(revista)
-      .then((result: any) => {
-        console.log(result.key);
-      });
+      .then((result: any) => {});
   }
 
   listar() {
@@ -26,6 +24,12 @@ export class RevistaService {
       map(changes => {
         return changes.map(c => ({ id: c.payload.key, ...c.payload.val() as Revista}));
       })
+    );
+  }
+
+  obterRevista(revistaId: string) {
+    return this.db.object('revistas/'+revistaId).snapshotChanges().pipe(
+      map(res => ({ id: res.payload.key, ...res.payload.val() as Revista} as Revista))
     );
   }
 }

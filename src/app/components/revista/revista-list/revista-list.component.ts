@@ -23,7 +23,7 @@ export class RevistaListComponent implements OnInit {
   }
 
   createRevista() {
-    this.router.navigate(["/revistas/create"])
+    this.router.navigate(["/revista/create"])
   }
 
   applyFilter(event: Event) {

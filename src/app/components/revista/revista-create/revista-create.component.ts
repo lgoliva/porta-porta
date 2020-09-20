@@ -21,12 +21,12 @@ export class RevistaCreateComponent implements OnInit {
 
   salvar() {
     this.revistaService.salvar(this.revista);
-    // this.produtoService.showMenssage("Produt cadastrado com sucesso");
+//    this.produtoService.showMenssage("Produt cadastrado com sucesso");
     this.cancelar();
   }
 
   cancelar(): void {
-    this.router.navigate(["/revistas"]);
+    this.router.navigate(["/revista"]);
   }
 
 }
