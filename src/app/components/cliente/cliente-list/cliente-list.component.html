@@ -33,15 +33,17 @@
       <ng-container matColumnDef="action">
         <th mat-header-cell *matHeaderCellDef>#</th>
         <td mat-cell *matCellDef="let element">
-            <a routerLink="/clientes/update/{{ element.id }}" class="edit">
-                <i class="material-icons">
-                    edit
-                </i>
+
+            <a routerLink="/pedido/listByCliente/{{ element.id }}" class="edit">
+              <mat-icon>local_mall</mat-icon>  
             </a>
-            <a routerLink="/clientes/delete/{{ element.id }}" class="delete">
-                <i class="material-icons">
-                    delete
-                </i>
+
+            <a routerLink="/cliente/edit/{{ element.id }}">
+              <mat-icon color="accent">edit</mat-icon>
+            </a>
+
+            <a routerLink="/cliente/delete/{{ element.id }}" >
+              <mat-icon color="warn">delete</mat-icon>  
             </a>
         </td>
       </ng-container>

@@ -37,4 +37,10 @@ export class ClienteService {
       })
     );
   }
+
+  obterCliente(clienteId) {
+    return this.db.object('clientes/'+clienteId).snapshotChanges().pipe(
+      map(res => ({ id: res.payload.key, ...res.payload.val() as Cliente} as Cliente))
+    );
+  }
 }
