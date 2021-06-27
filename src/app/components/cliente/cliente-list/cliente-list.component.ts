@@ -25,7 +25,7 @@ export class ClienteListComponent implements OnInit {
   }
 
   createCliente() {
-    this.router.navigate(["/clientes/create"])
+    this.router.navigate(["/cliente/create"])
   }
 
   applyFilter(event: Event) {

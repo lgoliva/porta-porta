@@ -1,4 +1,5 @@
 
+
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
@@ -9,6 +10,9 @@ import { ProdutoCreateComponent } from './components/produto/produto-create/prod
 import { ProdutoListComponent } from './components/produto/produto-list/produto-list.component';
 import { RevistaListComponent } from './components/revista/revista-list/revista-list.component';
 import { RevistaCreateComponent } from './components/revista/revista-create/revista-create.component';
+import { ClienteShowComponent } from './components/cliente/cliente-show/cliente-show.component';
+import { PedidoListClienteComponent } from './components/pedido/pedido-list-cliente/pedido-list-cliente.component';
+import { PedidoCreateClienteComponent } from './components/pedido/pedido-create-cliente/pedido-create-cliente.component';
 
 const routes: Routes = [
   {
@@ -16,36 +20,48 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
-    path: "clientes",
+    path: "cliente",
     component: ClienteListComponent
   },
   {
-    path: "clientes/create",
+    path: "cliente/create",
     component: ClienteCreateComponent
   },
   {
-    path: "clientes/edit",
+    path: "cliente/edit/:id",
     component: ClienteCreateComponent
   },
   {
-    path: "clientes/delete",
+    path: "cliente/show/:id",
+    component: ClienteShowComponent
+  },
+  {
+    path: "cliente/delete",
     component: ClienteCreateComponent
   },
   {
-    path: "revistas",
+    path: "revista",
     component: RevistaListComponent
   },
   {
-    path: "revistas/create",
+    path: "revista/create",
     component: RevistaCreateComponent
   },
   {
-    path: "produtos",
+    path: "produto",
     component: ProdutoListComponent
   },
   {
-    path: "produtos/create",
+    path: "produto/create",
     component: ProdutoCreateComponent
+  },
+  {
+    path: "pedido/listByCliente/:id",
+    component: PedidoListClienteComponent
+  },
+  {
+    path: "pedido/createByCliente/:id",
+    component: PedidoCreateClienteComponent
   }
 ];
 
@@ -53,4 +69,5 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
+
 export class AppRoutingModule { }

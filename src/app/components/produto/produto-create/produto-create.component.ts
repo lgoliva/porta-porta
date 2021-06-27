@@ -32,6 +32,6 @@ export class ProdutoCreateComponent implements OnInit {
   }
 
   cancelar(): void {
-    this.router.navigate(["/produtos"]);
+    this.router.navigate(["/produto"]);
   }
 }

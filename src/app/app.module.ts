@@ -23,6 +23,8 @@ import { MatFormFieldModule } from '@angular/material/form-field'
 import { MatInputModule } from '@angular/material/input'
 import { MatTableModule } from '@angular/material/table'
 import { MatSelectModule } from '@angular/material/select';
+import { MatIconModule } from '@angular/material/icon';
+import { MatTabsModule } from '@angular/material/tabs';
 
 import { HeaderComponent } from './components/template/header/header.component';
 import { FooterComponent } from './components/template/footer/footer.component';
@@ -36,6 +38,12 @@ import { LoginFormComponent } from './components/usuario/login-form/login-form.c
 import { RegistroFormComponent } from './components/usuario/registro-form/registro-form.component';
 import { RevistaListComponent } from './components/revista/revista-list/revista-list.component';
 import { RevistaCreateComponent } from './components/revista/revista-create/revista-create.component';
+import { ProdutoShowComponent } from './components/produto/produto-show/produto-show.component';
+import { ClienteShowComponent } from './components/cliente/cliente-show/cliente-show.component';
+import { PedidoListComponent } from './components/pedido/pedido-list/pedido-list.component';
+import { PedidoFormComponent } from './components/pedido/pedido-form/pedido-form.component';
+import { PedidoListClienteComponent } from './components/pedido/pedido-list-cliente/pedido-list-cliente.component';
+import { PedidoCreateClienteComponent } from './components/pedido/pedido-create-cliente/pedido-create-cliente.component';
 
 
 @NgModule({
@@ -52,7 +60,13 @@ import { RevistaCreateComponent } from './components/revista/revista-create/revi
     LoginFormComponent,
     RegistroFormComponent,
     RevistaListComponent,
-    RevistaCreateComponent
+    RevistaCreateComponent,
+    ProdutoShowComponent,
+    ClienteShowComponent,
+    PedidoListComponent,
+    PedidoFormComponent,
+    PedidoListClienteComponent,
+    PedidoCreateClienteComponent
   ],
   imports: [
     BrowserModule,
@@ -71,7 +85,9 @@ import { RevistaCreateComponent } from './components/revista/revista-create/revi
     MatFormFieldModule,
     MatInputModule,
     MatTableModule,
-    MatSelectModule
+    MatSelectModule,
+    MatIconModule,
+    MatTabsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

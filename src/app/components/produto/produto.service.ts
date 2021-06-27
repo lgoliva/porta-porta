@@ -50,4 +50,15 @@ export class ProdutoService {
       map(res => ({ id: res.payload.key, ...res.payload.val() as Revista} as Revista))
     );
   }
+
+  obterProdutoPorCodigoRevista(revistaId: string, codigo: string) {
+    return this.db.list('produtos', item => item.orderByChild('revistaId').equalTo(revistaId))
+    .snapshotChanges()
+    .pipe(
+      map(changes => {
+          return changes.map(c => ({ id: c.payload.key, ...c.payload.val() as Produto}));
+        }
+      )
+    )
+  }
 }

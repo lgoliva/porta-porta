@@ -47,7 +47,7 @@ export class ProdutoListComponent implements OnInit {
   }
 
   createProduto() {
-    this.router.navigate(["/produtos/create"])
+    this.router.navigate(["/produto/create"])
   }
 
   applyFilter(event: Event) {

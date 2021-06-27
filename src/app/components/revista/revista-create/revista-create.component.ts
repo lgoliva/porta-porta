@@ -21,7 +21,6 @@ export class RevistaCreateComponent implements OnInit {
 
   salvar() {
     this.revistaService.salvar(this.revista);
-//    this.produtoService.showMenssage("Produt cadastrado com sucesso");
     this.cancelar();
   }
 
